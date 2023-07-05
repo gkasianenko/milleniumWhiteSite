@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inner-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.slider-container {
+}
+
+.faq-item .faq-item-content {
+  display: none;
+}
+
+.faq-item.opened .faq-item-content {
+  display: block;
+}
+
+.faq-item-btn {
+  transform: rotate(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.faq-item-btn.opened {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.track {
+  display: flex;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 26s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
