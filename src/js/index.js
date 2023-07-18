@@ -8,8 +8,29 @@
     prevEl: '.swiper-prev',
   },
   speed: 400,
-    spaceBetween: 30,
-    slidesPerView: 5,
+  
+
+    breakpoints: {
+     
+      260: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      630: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+    
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      },
+     
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30
+      }
+    }
     });
 
 const faqItems = document.querySelectorAll(".faq-item");
